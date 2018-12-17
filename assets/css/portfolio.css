@@ -81,13 +81,16 @@
   height: 100%;
 }
 
-#superModal img {
-	position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
+#superModalImgWrap {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: auto; 
+  height: auto;
+}
+
+#superModalImgWrap img{
   width: auto; 
   height: 86%;
 }
@@ -125,22 +128,20 @@
   margin-right: 1%;
 }
 
-.close:hover, #superClose:hover {
+.close:hover, #superClose:hover, #superCloseWrap:hover > #superClose {
   background: url(../svg/closeHover.svg) no-repeat center;
   background-size: auto 100%;
   height: calc(6px + (60 - 6) * ((100vw - 300px) / (3840 - 300))); 
   width: calc(6px + (60 - 6) * ((100vw - 300px) / (3840 - 300)));
 }
 
-#superClose {
-  position: fixed;
-  top: 0;
-  right: 0;
-  background-color: #ffffff;
-}
-
-#superClose:hover {
-  background-color: #ffffff;
+#superCloseWrap {
+  position: absolute;
+  top: -3vw;
+  right: -3vw;
+  padding: .5vw;
+  background-color: #000000;
+  cursor: pointer;
 }
 
 .modalBody {
@@ -179,11 +180,11 @@
   margin-bottom: 1%;
 }
 
-.pacGifs {
+.exampleImg {
   height: 25vh;
 }
 
-.pacGifs img {
+.exampleImg img {
   width: auto;
   height: 100%;
 }
