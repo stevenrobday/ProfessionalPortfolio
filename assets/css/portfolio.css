@@ -1,0 +1,211 @@
+.category {
+  font-size: calc(6px + (60 - 6) * ((100vw - 300px) / (3840 - 300)));
+  font-weight: bold;
+  margin: 2% 0 1% 0;
+  text-align: center;
+}
+
+.examples {
+  display: flex;
+  justify-content: center;
+  height: 24vh;
+}
+
+.examples > div {
+  width: 24vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#pacmentalImg {
+  background: url(../png/pacmental.png) no-repeat center;
+  background-size: auto 100%;
+  height: 100%; 
+  width: 100%;
+  cursor: pointer;
+  border: 5px solid #0047b3;
+  border-radius: 25px;
+  margin-bottom: 3%;
+}
+
+#pacmentalImg:hover {
+  background: url(../png/pacmentalHover.png) no-repeat center;
+  background-size: auto 100%;
+  height: 100%; 
+  width: 100%;
+  cursor: pointer;
+  border: 5px solid #005ce6;
+  border-radius: 25px;
+  
+}
+
+.title {
+  font-size: calc(4px + (36 - 4) * ((100vw - 300px) / (3840 - 300)));
+  text-align: center;
+  font-weight: bold;
+}
+
+#modalShade, #superShade {
+	display: none;
+	background: #4d94ff;
+  position: fixed; 
+  left: 0; 
+  top: 0;
+  width: 100%; 
+  height: 100%;
+  opacity: .5;
+}
+
+#pacmentalModal {
+  display: none;
+	position: absolute;
+  background: #fffaea;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 60%; 
+  height: 80%;
+  border: 5px solid #0047b3;
+  border-radius: 25px;
+}
+
+#superModal {
+  display: none;
+  position: fixed; 
+  left: 0; 
+  top: 0;
+  width: 100%; 
+  height: 100%;
+}
+
+#superModal img {
+	position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: auto; 
+  height: 86%;
+}
+
+.modalWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.modalHeader {
+  padding: 1% 0 1% 0;
+  display: flex;
+  top: 0;
+  background: #ffd64d;
+  width: 100%;
+  justify-content: space-between;
+  height: calc(6px + (60 - 6) * ((100vw - 300px) / (3840 - 300)));
+  border-radius: 20px 20px 0 0;
+}
+
+.modalTitle {
+  font-size: calc(6px + (60 - 6) * ((100vw - 300px) / (3840 - 300)));
+}
+
+.close, #superClose {
+  background: url(../svg/close.svg) no-repeat center;
+  background-size: auto 100%;
+  height: calc(6px + (60 - 6) * ((100vw - 300px) / (3840 - 300))); 
+  width: calc(6px + (60 - 6) * ((100vw - 300px) / (3840 - 300)));
+  cursor: pointer;
+}
+
+.close {
+  margin-right: 1%;
+}
+
+.close:hover, #superClose:hover {
+  background: url(../svg/closeHover.svg) no-repeat center;
+  background-size: auto 100%;
+  height: calc(6px + (60 - 6) * ((100vw - 300px) / (3840 - 300))); 
+  width: calc(6px + (60 - 6) * ((100vw - 300px) / (3840 - 300)));
+}
+
+#superClose {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #ffffff;
+}
+
+#superClose:hover {
+  background-color: #ffffff;
+}
+
+.modalBody {
+  padding-top: 1%;
+  font-size: calc(6px + (32 - 6) * ((100vw - 300px) / (3840 - 300)));
+  overflow: auto;
+  height: 100%;
+}
+
+.technologies {
+  text-align: center;
+  font-style: italic;
+}
+
+.summary {
+  text-align: center;
+  margin: 1% 10% 1% 10%;
+}
+
+#energizers {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  height: 24vh;
+}
+
+#energizers > div {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+}
+
+#energizers > div img{
+  width: 100%;
+  height: 92%;
+  margin-bottom: 1%;
+}
+
+.pacGifs {
+  height: 25vh;
+}
+
+.pacGifs img {
+  width: auto;
+  height: 100%;
+}
+
+.modalFooter {
+  height: 20px;
+}
+
+.thumbnail {
+  cursor: pointer;
+}
+
+p {
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.biggerMargin {
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+i {
+  font-style: italic;
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Steven Day</title>
+  <link rel="stylesheet" href="assets/css/reset.css" />
+  <link rel="stylesheet" href="assets/css/navbar.css" />
+  <link rel="stylesheet" href="assets/css/portfolio.css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <span id="nameContainer">
+        <p>Steven Day</p>
+      </span>
+      <ul class="navItems">
+        <div class="pages">
+          <li>
+            <a>
+              <span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a class="currentPage">
+              <span>Portfolio</span>
+            </a>
+          </li>
+          <li>
+            <a>
+              <span>Skills</span>
+            </a>
+          </li>
+        </div>
+        <div class="icons">
+          <div>
+            <div id="github"></div>
+          </div>
+          <div>
+            <div id="linkedIn"></div>
+          </div>
+          <div>
+            <div id="resume"></div>
+          </div>
+          <div>
+            <div id="email"></div>
+          </div>
+        </div>
+      </ul>
+    </nav>
+  </header>
+  <main id="content" role="main">
+    <div class="category">Games</div>
+    <div class="examples">
+      <div id="pacmental">
+        <div id="pacmentalImg"></div>
+        <div class="title">Pac-Mental</div>
+      </div>
+    </div>
+    <div id="modalShade"></div>
+    <div id="pacmentalModal">
+      <div class="modalWrapper">
+        <div class="modalHeader">
+          <div></div>
+          <div class="modalTitle"><a href="http://thestevester.com/pacmental/index.html" target="_blank">Pac-Mental</a></div>
+          <div class="close"></div>
+        </div>
+        <div class="modalBody">
+          <div class="technologies">
+            <p>
+              Technologies used: HTML5, CSS3, JavaScript, jQuery, MySQL, PHP, Howler.js
+            </p>
+          </div>
+          <div class="summary">
+            <p>
+              <i>Pac-Mental</i> is a twist on the original <i>Pac-Man</i> and <i>Ms. Pac-Man</i> arcade games. I made it
+              with the help of <a href="http://www.gamasutra.com/view/feature/3938/the_pacman_dossier.php?print=1" target="_blank">The
+                Pac-Man Dossier</a> by Jamey Pittman, and Shaun Williams's <a href="https://bitbucket.org/shaunew/pac-man" target="_blank">JavaScript
+                rewrite</a> of the originals, both invaluable resources.
+            </p>
+            <p class="biggerMargin">
+              The energizers in <i>Pac-Mental</i> are elemental-powered:
+            </p>
+            <div id="energizers">
+              <div>
+                <img class="thumbnail" src="assets/gif/earth.gif" />
+                <div>
+                  <p>
+                    Earth
+                  </p>
+                </div>
+              </div>
+              <div>
+                <img class="thumbnail" src="assets/gif/fire.gif" />
+                <div>
+                  <p>
+                    Fire
+                  </p>
+                </div>
+              </div>
+              <div>
+                <img class="thumbnail" src="assets/gif/air.gif" />
+                <div>
+                  <p>
+                    Air
+                  </p>
+                </div>
+              </div>
+              <div>
+                <img class="thumbnail" src="assets/gif/water.gif" />
+                <div>
+                  <p>
+                    Water
+                  </p>
+                </div>
+              </div>
+            </div>
+            <p class="biggerMargin">
+              The ghosts and maze double after the first intermission:
+            </p>
+            <div class="pacGifs">
+              <img class="thumbnail" src="assets/gif/level3.gif" />
+            </div>
+            <p class="biggerMargin">
+              And triple after the second:
+            </p>
+            <div class="pacGifs">
+              <img class="thumbnail" src="assets/gif/level6.gif" />
+            </div>
+            <p class="biggerMargin">
+              The intermissions are parodies of the original's. Here's my favorite (originally, Blinky rips his sheet on the nail):
+            </p>
+            <div class="pacGifs">
+              <img class="thumbnail" src="assets/gif/intermission2.gif" />
+            </div>
+            <p class="biggerMargin">
+              The game has a leaderboard, as well.
+            </p>
+          </div>
+        </div>
+        <div class="modalFooter"></div>
+      </div>
+    </div>
+    <div id="superModal"><div id="superShade"></div><div id="superClose"></div><div id="superModalImg"></div></div>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="assets/js/modal.js"></script>
+</body>
+
+</html>
