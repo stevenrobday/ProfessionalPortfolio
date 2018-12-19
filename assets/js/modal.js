@@ -41,7 +41,7 @@ $("#superCloseWrap, #superClose, #superShade").on("click", function () {
 
 window.addEventListener('keyup', (e) => {
   if (e.key === "Escape") {
-    if (!superModal) {
+    if (!isSuper) {
       modalShade.fadeOut("fast");
       dataId.hide("fast");
     }
