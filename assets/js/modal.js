@@ -11,7 +11,7 @@ var dataId;
 var close = $(".close");
 var thumbnail = $(".thumbnail");
 
-$(exampleThumb).on("click", function () {
+exampleThumb.on("click", function () {
   modalShade.fadeIn("fast");
   dataId = $("#" + $(this).attr("data-id"));
   dataId.show("fast");
@@ -22,7 +22,7 @@ $(".close, #modalShade").on("click", function () {
   dataId.hide("fast");
 });
 
-$(thumbnail).on("click", function () {
+thumbnail.on("click", function () {
   var src = $(this).attr("src");
   var imgTag = '<img src="' + src + '" />';
 
