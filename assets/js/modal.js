@@ -1,22 +1,28 @@
 var isSuper = false;
 
 var modalShade = $("#modalShade");
-//var pacmentalModal = ;
+var exampleThumb = $(".exampleThumb");
 var superModalImg = $("#superModalImg");
 var superShade = $("#superShade");
 var superModal = $("#superModal");
+var superClose = $("#superClose");
+var superCloseWrap = $("#superCloseWrap");
+var dataId;
+var close = $(".close");
+var thumbnail = $(".thumbnail");
 
-$("#pacmentalImg").on("click", function () {
+$(exampleThumb).on("click", function () {
   modalShade.fadeIn("fast");
-  $("#pacmentalModal").show("fast");
+  dataId = "#" + $(this).attr("data-id");
+  $(dataId).show("fast");
 });
 
 $(".close, #modalShade").on("click", function () {
   modalShade.fadeOut("fast");
-  $("#pacmentalModal").hide("fast");
+  $(dataId).hide("fast");
 });
 
-$(".thumbnail").on("click", function () {
+$(thumbnail).on("click", function () {
   var src = $(this).attr("src");
   var imgTag = '<img src="' + src + '" />';
 

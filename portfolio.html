@@ -54,13 +54,17 @@
   <main id="content" role="main">
     <div class="category">Games</div>
     <div class="examples">
-      <div id="pacmental">
+      <div class="exampleThumb" data-id="pacmentalModal">
         <div id="pacmentalImg"></div>
         <div class="title">Pac-Mental</div>
       </div>
+      <div class="exampleThumb" data-id="pebblesModal">
+        <div id="pebblesImg"></div>
+        <div class="title">Fruity Pebbles: The Game</div>
+      </div>
     </div>
     <div id="modalShade"></div>
-    <div id="pacmentalModal">
+    <div class="modal" id="pacmentalModal">
       <div class="modalWrapper">
         <div class="modalHeader">
           <div></div>
@@ -76,16 +80,20 @@
           <div class="summary">
             <p>
               <i>Pac-Mental</i> is a twist on the original <i>Pac-Man</i> and <i>Ms. Pac-Man</i> arcade games. I made it
-              with the help of <a href="http://www.gamasutra.com/view/feature/3938/the_pacman_dossier.php?print=1" target="_blank">The
-                Pac-Man Dossier</a> by Jamey Pittman, and Shaun Williams's <a href="https://bitbucket.org/shaunew/pac-man" target="_blank">JavaScript
-                rewrite</a> of the originals, both invaluable resources.
+              with the help of
+              <a href="http://www.gamasutra.com/view/feature/3938/the_pacman_dossier.php?print=1" target="_blank">The Pac-Man
+                Dossier
+              </a>
+              by Jamey Pittman, and Shaun Williams's
+              <a href="https://bitbucket.org/shaunew/pac-man" target="_blank">JavaScript rewrite</a>
+              of the originals, both invaluable resources.
             </p>
             <p class="biggerMargin">
               The energizers in <i>Pac-Mental</i> are elemental-powered:
             </p>
             <div id="energizers">
               <div>
-                <img class="thumbnail" src="assets/gif/earth.gif" />
+                <img class="thumbnail" src="assets/gif/pacmental/earth.gif" />
                 <div>
                   <p>
                     Earth
@@ -93,7 +101,7 @@
                 </div>
               </div>
               <div>
-                <img class="thumbnail" src="assets/gif/fire.gif" />
+                <img class="thumbnail" src="assets/gif/pacmental/fire.gif" />
                 <div>
                   <p>
                     Fire
@@ -101,7 +109,7 @@
                 </div>
               </div>
               <div>
-                <img class="thumbnail" src="assets/gif/air.gif" />
+                <img class="thumbnail" src="assets/gif/pacmental/air.gif" />
                 <div>
                   <p>
                     Air
@@ -109,7 +117,7 @@
                 </div>
               </div>
               <div>
-                <img class="thumbnail" src="assets/gif/water.gif" />
+                <img class="thumbnail" src="assets/gif/pacmental/water.gif" />
                 <div>
                   <p>
                     Water
@@ -121,40 +129,104 @@
               The ghosts and maze double after the first intermission:
             </p>
             <div class="exampleImg">
-              <img class="thumbnail" src="assets/gif/level3.gif" />
+              <img class="thumbnail" src="assets/gif/pacmental/level3.gif" />
             </div>
             <p class="biggerMargin">
               And triple after the second:
             </p>
             <div class="exampleImg">
-              <img class="thumbnail" src="assets/gif/level6.gif" />
+              <img class="thumbnail" src="assets/gif/pacmental/level6.gif" />
             </div>
             <p class="biggerMargin">
               The intermissions are parodies of the original's. Here's my favorite (originally, Blinky rips his sheet on the nail):
             </p>
             <div class="exampleImg">
-              <img class="thumbnail" src="assets/gif/intermission2.gif" />
+              <img class="thumbnail" src="assets/gif/pacmental/intermission2.gif" />
             </div>
             <p class="biggerMargin">
               The game has a leaderboard, as well.
             </p>
             <div class="exampleImg">
-              <img class="thumbnail" src="assets/png/leaderboard.png" />
+              <img class="thumbnail" src="assets/png/pacmental/leaderboard.png" />
             </div>
           </div>
         </div>
         <div class="modalFooter"></div>
       </div>
     </div>
+    <div class="modal" id="pebblesModal">
+      <div class="modalWrapper">
+        <div class="modalHeader">
+          <div></div>
+          <div class="modalTitle">
+            <a href="http://thestevester.com/FruityPebblesTheGame/index.html" target="_blank">Fruity Pebbles: The Game</a></div>
+          <div class="close"></div>
+        </div>
+        <div class="modalBody">
+          <div class="technologies">
+            <p>
+              Technologies used: HTML5, CSS3, JavaScript, Howler.js
+            </p>
+          </div>
+          <div class="summary">
+            <p>
+              I was always curious how games worked, and had an idea for a simple and absurd game. So in 2014, I read a few books, and
+              developed a very inefficient <i>Fruity Pebbles: The Game</i>. I rewrote it in 2016, and brought
+              it to <i>ZapCon</i>, a local arcade convention. After that, it appeared on a podcast, YouTube, and even a top
+              games of 2016 list.
+            </p>
+            <p>
+              <i>Fruity Pebbles: The Game</i> tells the story of what happens next after a Fruity Pebbles commercial.
+            </p>
+            <p class="biggerMargin">
+              The game starts with the commercial. Because this is important to the plot, it can't be skipped:
+            </p>
+            <div class="exampleImg">
+              <img class="thumbnail" src="assets/gif/pebbles/pebblesCommercial.gif" />
+            </div>
+            <p class="biggerMargin">
+              Learn important tips for surviving this brutally difficult game in the tutorial:
+            </p>
+            <div class="exampleImg">
+              <img class="thumbnail" src="assets/gif/pebbles/tutorial.gif" />
+            </div>
+            <p class="biggerMargin">
+              In the first stage, Fred must face off against multiplying Barnies:
+            </p>
+            <div class="exampleImg">
+              <img class="thumbnail" src="assets/gif/pebbles/stageOne.gif" />
+            </div>
+            <p class="biggerMargin">
+              In the second, Fred goes up against the Master Rapper, who turns out to be Barney:
+            </p>
+            <div class="exampleImg">
+              <img class="thumbnail" src="assets/gif/pebbles/stageTwo.gif" />
+            </div>
+            <p class="biggerMargin">
+              Finally, Fred must utilize all the skills he's learned in order to defeat the final boss:
+            </p>
+            <div class="exampleImg">
+              <img class="thumbnail" src="assets/gif/pebbles/stageThree.gif" />
+            </div>
+            <p class="biggerMargin">
+              With MegaBarney defeated, and Fred's pebbles in their rightful stomach, peace is restored to Bedrock:
+              </p>
+              <div class="exampleImg">
+                <img class="thumbnail" src="assets/gif/pebbles/ending.gif" />
+              </div>
+          </div>
+        </div>
+        <div class="modalFooter"></div>
+      </div>
+    </div>
+    <div id="superShade"></div>
     <div id="superModal">
-      <div id="superShade"></div>
       <div id="superModalImgWrap">
         <div id="superCloseWrap">
           <div id="superClose"></div>
         </div>
         <div id="superModalImg"></div>
       </div>
-    </div>
     </div>
   </main>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
