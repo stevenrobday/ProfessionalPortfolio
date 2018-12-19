@@ -13,13 +13,13 @@ var thumbnail = $(".thumbnail");
 
 $(exampleThumb).on("click", function () {
   modalShade.fadeIn("fast");
-  dataId = "#" + $(this).attr("data-id");
-  $(dataId).show("fast");
+  dataId = $("#" + $(this).attr("data-id"));
+  dataId.show("fast");
 });
 
 $(".close, #modalShade").on("click", function () {
   modalShade.fadeOut("fast");
-  $(dataId).hide("fast");
+  dataId.hide("fast");
 });
 
 $(thumbnail).on("click", function () {
