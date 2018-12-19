@@ -43,7 +43,7 @@ window.addEventListener('keyup', (e) => {
   if (e.key === "Escape") {
     if (!superModal) {
       modalShade.fadeOut("fast");
-      $("#pacmentalModal").hide("fast");
+      dataId.hide("fast");
     }
     else {
       isSuper = false;
