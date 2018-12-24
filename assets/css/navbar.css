@@ -6,10 +6,6 @@ body {
   flex-direction: column;
 }
 
-#content{
-  flex: auto;
-}
-
 nav {
   top: 0;
   width: 100%;
@@ -21,10 +17,11 @@ nav {
 #nameContainer {
   color: #f7f7ff;
   font-size: calc(6px + (60 - 6) * ((100vw - 300px) / (3840 - 300)));
-  width: 10%;
   display: flex;
   align-items: center;
-	justify-content: center;
+  justify-content: center;
+  flex: 1 0 auto;
+  margin-left: 0.5%;
 }
 
 .navItems {
@@ -34,14 +31,13 @@ nav {
 }
 
 .pages{
+  height: 100%;
   width: 20%;
   display: flex;
 }
 
 .pages li{
-  height: 100%;
-  width: 33.3%;
-  display: flex;
+  flex: 1 0 auto;
 }
 
 .pages li a {

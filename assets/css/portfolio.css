@@ -8,85 +8,52 @@
 .examples {
   display: flex;
   justify-content: center;
-  height: 14vw;
+  height: 100%;
 }
 
 .examples > div {
   margin: 0 2vw;
-  width: 14vw;
   height: 100%;
-  display: flex;
+  width: 14%;
+  display: flex; 
   flex-direction: column;
 }
 
 #pacmentalImg {
   background: url(../png/pacmental/pacmental.png) no-repeat center;
-  background-size: auto 100%;
-  height: 10.5vw; 
-  width: 100%;
-  cursor: pointer;
-  border: 5px solid #0047b3;
-  border-radius: 25px;
-  margin-bottom: 3%;
 }
 
 #pacmentalImg:hover {
   background: url(../png/pacmental/pacmentalHover.png) no-repeat center;
-  background-size: auto 100%;
-  height: 10.5vw; 
-  width: 100%;
-  cursor: pointer;
-  border: 5px solid #005ce6;
-  border-radius: 25px;
-  
 }
 
 #pebblesImg {
   background: url(../png/pebbles/pebbles.png) no-repeat center;
-  background-size: auto 100%;
-  height: 10.5vw; 
-  width: 100%;
-  cursor: pointer;
-  border: 5px solid #0047b3;
-  border-radius: 25px;
-  margin-bottom: 3%;
 }
 
 #pebblesImg:hover {
   background: url(../png/pebbles/pebblesHover.png) no-repeat center;
-  background-size: auto 100%;
-  height: 10.5vw; 
-  width: 100%;
-  cursor: pointer;
-  border: 5px solid #005ce6;
-  border-radius: 25px; 
 }
 
 #triviaGameImg {
   background: url(../png/triviaGame/startPage.png) no-repeat center;
-  background-size: auto 100%;
-  height: 10.5vw; 
-  width: 100%;
-  cursor: pointer;
-  border: 5px solid #0047b3;
-  border-radius: 25px;
-  margin-bottom: 3%;
 }
 
 #triviaGameImg:hover {
   background: url(../png/triviaGame/startPageHover.png) no-repeat center;
-  background-size: auto 100%;
-  height: 10.5vw; 
-  width: 100%;
-  cursor: pointer;
-  border: 5px solid #005ce6;
-  border-radius: 25px; 
 }
 
 #reaganImg {
   background: url(../png/hangman/reagan.png) no-repeat center;
-  background-size: auto 100%;
-  height: 10.5vw; 
+}
+
+#reaganImg:hover {
+  background: url(../png/hangman/reaganHover.png) no-repeat center;
+}
+
+#pacmentalImg, #pebblesImg, #triviaGameImg, #reaganImg {
+  background-size: auto 100%; 
+  height: 100%; 
   width: 100%;
   cursor: pointer;
   border: 5px solid #0047b3;
@@ -94,14 +61,13 @@
   margin-bottom: 3%;
 }
 
-#reaganImg:hover {
-  background: url(../png/hangman/reaganHover.png) no-repeat center;
-  background-size: auto 100%;
-  height: 10.5vw; 
+#pacmentalImg:hover, #pebblesImg:hover, #triviaGameImg:hover, #reaganImg:hover {
+  background-size: auto 100%; 
+  height: 100%; 
   width: 100%;
   cursor: pointer;
   border: 5px solid #005ce6;
-  border-radius: 25px; 
+  border-radius: 25px;
 }
 
 .title {
