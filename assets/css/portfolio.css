@@ -8,13 +8,13 @@
 .examples {
   display: flex;
   justify-content: center;
-  height: 100%;
+  height: 24vh;
 }
 
 .examples > div {
   margin: 0 2vw;
   height: 100%;
-  width: 14%;
+  width: 13%;
   display: flex; 
   flex-direction: column;
 }
