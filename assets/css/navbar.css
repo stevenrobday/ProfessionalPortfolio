@@ -1,7 +1,7 @@
 body {
   font-family: Helvetica, Verdana, Arial;
   background-color: #ebf3ff;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
 }
