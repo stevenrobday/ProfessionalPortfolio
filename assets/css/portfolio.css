@@ -94,7 +94,7 @@
   left: 0;
   margin: auto;
   width: 60%; 
-  height: 80%;
+  height: 60%;
   border: 5px solid #0047b3;
   border-radius: 18px;
 }
@@ -127,7 +127,7 @@
   background: #ffd64d;
   width: 100%;
   justify-content: space-between;
-  height: calc(6px + (60 - 6) * ((100vw - 300px) / (3840 - 300)));
+  height: calc(8px + (24 - 8) * ((100vw - 300px) / (1920 - 300)));
   border-radius: 12px 12px 0 0;
 }
 
@@ -138,8 +138,8 @@
 .close, #superClose {
   background: url(../svg/close.svg) no-repeat center;
   background-size: auto 100%;
-  height: calc(6px + (60 - 6) * ((100vw - 300px) / (3840 - 300))); 
-  width: calc(6px + (60 - 6) * ((100vw - 300px) / (3840 - 300)));
+  height: calc(8px + (24 - 8) * ((100vw - 300px) / (1920 - 300))); 
+  width: calc(8px + (24 - 8) * ((100vw - 300px) / (1920 - 300)));
   cursor: pointer;
 }
 
@@ -150,8 +150,8 @@
 .close:hover, #superClose:hover, #superCloseWrap:hover > #superClose {
   background: url(../svg/closeHover.svg) no-repeat center;
   background-size: auto 100%;
-  height: calc(6px + (60 - 6) * ((100vw - 300px) / (3840 - 300))); 
-  width: calc(6px + (60 - 6) * ((100vw - 300px) / (3840 - 300)));
+  height: calc(8px + (24 - 8) * ((100vw - 300px) / (1920 - 300)));
+  width: calc(8px + (24 - 8) * ((100vw - 300px) / (1920 - 300)));
 }
 
 #superCloseWrap {
@@ -165,7 +165,7 @@
 
 .modalBody {
   padding-top: 1%;
-  font-size: calc(6px + (32 - 6) * ((100vw - 300px) / (3840 - 300)));
+  font-size: calc(6px + (16 - 6) * ((100vw - 300px) / (1920 - 300)));
   overflow: auto;
   height: 100%;
 }
@@ -223,7 +223,7 @@ p {
 
 .biggerMargin {
   margin-top: 3%;
-  margin-bottom: 3%;
+  margin-bottom: 1%;
 }
 
 i {
