@@ -1,22 +1,19 @@
 .category {
-  font-size: calc(6px + (60 - 6) * ((100vw - 300px) / (3840 - 300)));
+  font-size: calc(8px + (24 - 8) * ((100vw - 300px) / (1920 - 300)));
   font-weight: bold;
-  margin: 2% 0 1% 0;
+  margin-top: 2%;
   text-align: center;
 }
 
 .examples {
   display: flex;
   justify-content: center;
-  height: 24vh;
 }
 
-.examples > div {
-  margin: 0 2vw;
-  height: 100%;
-  width: 13%;
+.exampleThumb {
   display: flex; 
   flex-direction: column;
+  margin: 1%;
 }
 
 #pacmentalImg {
@@ -53,25 +50,25 @@
 
 #pacmentalImg, #pebblesImg, #triviaGameImg, #reaganImg {
   background-size: auto 100%; 
-  height: 100%; 
-  width: 100%;
+  height: 9vw; 
+  width: 12vw;
   cursor: pointer;
   border: 5px solid #0047b3;
-  border-radius: 25px;
+  border-radius: 18px;
   margin-bottom: 3%;
 }
 
 #pacmentalImg:hover, #pebblesImg:hover, #triviaGameImg:hover, #reaganImg:hover {
   background-size: auto 100%; 
-  height: 100%; 
-  width: 100%;
+  height: 9vw; 
+  width: 12vw;
   cursor: pointer;
   border: 5px solid #005ce6;
-  border-radius: 25px;
+  border-radius: 18px;
 }
 
 .title {
-  font-size: calc(4px + (36 - 4) * ((100vw - 300px) / (3840 - 300)));
+  font-size: calc(6px + (16 - 6) * ((100vw - 300px) / (1920 - 300)));
   text-align: center;
   font-weight: bold;
 }
@@ -99,7 +96,7 @@
   width: 60%; 
   height: 80%;
   border: 5px solid #0047b3;
-  border-radius: 25px;
+  border-radius: 18px;
 }
 
 #superModal {
@@ -131,7 +128,7 @@
   width: 100%;
   justify-content: space-between;
   height: calc(6px + (60 - 6) * ((100vw - 300px) / (3840 - 300)));
-  border-radius: 20px 20px 0 0;
+  border-radius: 12px 12px 0 0;
 }
 
 .modalTitle {
