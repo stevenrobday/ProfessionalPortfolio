@@ -94,7 +94,7 @@
   left: 0;
   margin: auto;
   width: 60%; 
-  height: 60%;
+  height: 80%;
   border: 5px solid #0047b3;
   border-radius: 18px;
 }
@@ -111,7 +111,7 @@
 
 #superModal img{
   width: auto; 
-  height: 86vh;
+  height: 76vh;
 }
 
 .modalWrapper {
