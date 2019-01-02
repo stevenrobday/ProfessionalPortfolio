@@ -36,24 +36,24 @@ $thumbnail.on("click", function () {
   
   if(docHeight >= docWdth){
     if(docWdth < 400 || imgRatio < 1) {
-      $imgTag.height("auto");
+      $imgTag.height("100%");
       $imgTag.width("65vw");
     }
     else {
-      $imgTag.height("auto");
+      $imgTag.height("100%");
       $imgTag.width("80vw");
     }
   }
   else if(imgRatio <= 1){
     $imgTag.height("calc(100vh - var(--font-size-l) * 4)");
-    $imgTag.width("auto");
+    $imgTag.width("100%");
   }
   else if(imgRatio > 1.5){
-    $imgTag.height("auto");
+    $imgTag.height("100%");
     $imgTag.width("70vw");
   }
   else{
-    $imgTag.height("auto");
+    $imgTag.height("100%");
     $imgTag.width("50vw");
   }
 
