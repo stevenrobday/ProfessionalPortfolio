@@ -16,12 +16,12 @@
       </span>
       <ul id="pages">
         <li>
-          <a id="currentPage">
+          <a>
             <span>Home</span>
           </a>
         </li>
         <li>
-          <a>
+          <a id="currentPage">
             <span>Portfolio</span>
           </a>
         </li>
@@ -42,14 +42,25 @@
       </ul>
       <div id="hamburger">
         <div>
-            <div id="hamburgerImg"></div>
+          <div id="hamburgerImg"></div>
         </div>
       </div>
     </nav>
   </header>
   <main id="content" role="main">
-    <div class="category">Games</div>
     <div class="examples">
+      <div class="category">Databases</div>
+      <div class="exampleThumb" data-id="writeUpsModal">
+        <div id="writeUpsImg"></div>
+        <div class="title">Write-Ups</div>
+      </div>
+      <div class="exampleThumb" data-id="employeeModal">
+        <div id="employeeImg"></div>
+        <div class="title">Employee</div>
+      </div>
+    </div>
+    <div class="examples">
+      <div class="category">Games</div>
       <div class="exampleThumb" data-id="pacmentalModal">
         <div id="pacmentalImg"></div>
         <div class="title">Pac-Mental</div>
@@ -59,8 +70,8 @@
         <div class="title">Fruity Pebbles: The Game</div>
       </div>
     </div>
-    <div class="category">Guided Projects</div>
     <div class="examples">
+      <div class="category">Guided Projects</div>
       <div class="exampleThumb" data-id="triviaGameModal">
         <div id="triviaGameImg"></div>
         <div class="title">Trivia Game</div>
@@ -71,6 +82,133 @@
       </div>
     </div>
     <div id="modalShade"></div>
+    <div class="modal" id="writeUpsModal">
+      <div class="modalWrapper">
+        <div class="modalHeader">
+          <div></div>
+          <div class="modalTitle">
+            <p>Write-Ups Database</p>
+          </div>
+          <div class="close"></div>
+        </div>
+        <div class="modalBody">
+          <div class="technologies">
+            <p>
+              Technologies used: HTML5, CSS3, JavaScript, jQuery, PHP, MySQL, XAMPP, jSignature.js, Dropzone.js
+            </p>
+          </div>
+          <div class="summary">
+            <p>
+              Write-Ups database for tobacco store that gave everybody a lot of write-ups, populated here with Mario characters...
+            </p>
+            <p class="biggerMargin">
+              Let's view some records!
+            </p>
+            <div class="exampleImg">
+              <img class="thumbnail" src="assets/gif/writeUps/view.gif" />
+            </div>
+            <p class="biggerMargin">
+              Upper management can see all employees, while middle can only see the ones they manage (I'm using a key combo to log in and
+              out).
+            </p>
+            <div class="exampleImg">
+              <img class="thumbnail" src="assets/gif/writeUps/login.gif" />
+            </div>
+            <p class="biggerMargin">
+              The database interfaces with the employee database. Let's add Toad!
+            </p>
+            <div class="exampleImg">
+              <img class="thumbnail" src="assets/gif/writeUps/addEmp.gif" />
+            </div>
+            <p class="biggerMargin">
+              Now let's add a picture...
+            </p>
+            <div class="exampleImg">
+              <img class="thumbnail" src="assets/gif/writeUps/editEmp.gif" />
+            </div>
+            <p class="biggerMargin">
+              Let's write up Toad!
+            </p>
+            <div class="exampleImg">
+              <img class="thumbnail" src="assets/gif/writeUps/addRecord.gif" />
+            </div>
+            <p class="biggerMargin">
+              Let's edit a record.
+            </p>
+            <div class="exampleImg">
+              <img class="thumbnail" src="assets/gif/writeUps/editRecord.gif" />
+            </div>
+            <p class="biggerMargin">
+              Let's search for some employees:
+            </p>
+            <div class="exampleImg">
+              <img class="thumbnail" src="assets/gif/writeUps/search.gif" />
+            </div>
+            <p class="biggerMargin">
+              Let's navigate our history!
+            </p>
+            <div class="exampleImg">
+              <img class="thumbnail" src="assets/gif/writeUps/navigate.gif" />
+            </div>
+          </div>
+        </div>
+        <div class="modalFooter"></div>
+      </div>
+    </div>
+    <div class="modal" id="employeeModal">
+      <div class="modalWrapper">
+        <div class="modalHeader">
+          <div></div>
+          <div class="modalTitle">
+            <p>Employee Database</p>
+          </div>
+          <div class="close"></div>
+        </div>
+        <div class="modalBody">
+          <div class="technologies">
+            <p>
+              Technologies used: HTML5, CSS3, JavaScript, jQuery, PHP, MySQL, XAMPP, Dropzone.js
+            </p>
+          </div>
+          <div class="summary">
+            <p>
+              Employee database I made for a tobacco store. I wrote this a couple years ago; I'd say I've improved at design. Populated with Mario characters...
+            </p>
+            <p class="biggerMargin">
+              Let's filter and sort!
+            </p>
+            <div class="exampleImg">
+              <img class="thumbnail" src="assets/gif/employee/viewSort.gif" />
+            </div>
+            <p class="biggerMargin">
+              Let's add a record!
+            </p>
+            <div class="exampleImg">
+              <img class="thumbnail" src="assets/gif/employee/add.gif" />
+            </div>
+            <p class="biggerMargin">
+              Let's edit.
+            </p>
+            <div class="exampleImg">
+              <img class="thumbnail" src="assets/gif/employee/edit.gif" />
+            </div>
+            <p class="biggerMargin">
+              Now, let's do a search...
+            </p>
+            <div class="exampleImg">
+              <img class="thumbnail" src="assets/gif/employee/search.gif" />
+            </div>
+            <p class="biggerMargin">
+              Time to navigate!
+            </p>
+            <div class="exampleImg">
+              <img class="thumbnail" src="assets/gif/employee/nav.gif" />
+            </div>
+          </div>
+        </div>
+        <div class="modalFooter"></div>
+      </div>
+    </div>
     <div class="modal" id="pacmentalModal">
       <div class="modalWrapper">
         <div class="modalHeader">

@@ -149,7 +149,6 @@ nav {
   width: 100%;
   background-color: var(--navbar-background);
   display: flex;
-  height: var(--navbar-height);
   justify-content: space-between;
   position: relative;
   z-index: 3;
@@ -288,19 +287,22 @@ ul {
 
 
 /*PORTFOLIO*/
-
-.category {
-  font-size: var(--font-size-m);
-  font-weight: bold;
-  margin-top: var(--font-size-s);
-  margin-bottom: calc(var(--font-size-s) / 2);
-  text-align: center;
+main {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .examples {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.category {
+  font-size: var(--font-size-m);
+  font-weight: bold;
+  text-align: center;
+  margin: calc(var(--font-size-s) * 2) auto;
 }
 
 .exampleThumb div:first-child, .modal {
@@ -309,18 +311,33 @@ ul {
 }
 
 .exampleThumb:hover div:first-child {
-  border-color:  var(--thumb-border-hover);
+  border-color: var(--thumb-border-hover);
 }
 
 .exampleThumb {
   cursor: pointer;
   display: flex; 
   flex-direction: column;
-  margin: 0 var(--font-size-s) calc(var(--font-size-s) / 2) var(--font-size-s);
 }
 
 .exampleThumb:hover {
   color: var(--thumb-font-hover);
+}
+
+#writeUpsImg {
+  background: url(../png/writeUps/writeUps.png) no-repeat center;
+}
+
+.exampleThumb:hover #writeUpsImg {
+  background: url(../png/writeUps/writeUpsHover.png) no-repeat center;
+}
+
+#employeeImg {
+  background: url(../png/employee/employee.png) no-repeat center;
+}
+
+.exampleThumb:hover #employeeImg {
+  background: url(../png/employee/employeeHover.png) no-repeat center;
 }
 
 #pacmentalImg {
@@ -355,9 +372,11 @@ ul {
   background: url(../png/hangman/reaganHover.png) no-repeat center;
 }
 
-#pacmentalImg, #pebblesImg, #triviaGameImg, #reaganImg, 
-.exampleThumb:hover #pacmentalImg, .exampleThumb:hover #pebblesImg, .exampleThumb:hover #triviaGameImg, 
-.exampleThumb:hover #reaganImg {
+/*for some reason I can't target with selectors here*/
+#writeUpsImg , #employeeImg, #pacmentalImg, #pebblesImg, 
+#triviaGameImg, #reaganImg, .exampleThumb:hover #writeUpsImg,
+.exampleThumb:hover #employeeImg, .exampleThumb:hover #pacmentalImg,
+.exampleThumb:hover #pebblesImg, .exampleThumb:hover #triviaGameImg, .exampleThumb:hover #reaganImg {
   background-size: 100% auto; 
   width: var(--thumb-width);
   height: var(--thumb-height); 
@@ -368,6 +387,7 @@ ul {
   font-size: var(--font-size-xs);
   text-align: center;
   font-weight: bold;
+  margin-bottom: var(--font-size-s);
 }
 
 #modalShade, #superShade {
@@ -402,6 +422,7 @@ ul {
   transform: translate(-50%,-50%);
   width: auto; 
   height: auto;
+  z-index: 3;
 }
 
 .modalWrapper {

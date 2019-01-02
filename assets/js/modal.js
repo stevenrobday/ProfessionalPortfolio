@@ -31,11 +31,11 @@ $thumbnail.on("click", function () {
   var imgHeight = $(this).height();
   var imgRatio = imgWidth / imgHeight;
   
-  var winWdth = $(window).width();
-  var winHeight = $(window).height();
+  var docWdth = $(document).width();
+  var docHeight = $(document).height();
   
-  if(winHeight >= winWdth){
-    if(winWdth < 400 || imgRation < 1) {
+  if(docHeight >= docWdth){
+    if(docWdth < 400 || imgRatio < 1) {
       $imgTag.height("auto");
       $imgTag.width("65vw");
     }
@@ -81,5 +81,13 @@ window.addEventListener('keyup', (e) => {
       $superShade.fadeOut("fast");
       $superModal.hide("fast");
     }
+  }
+});
+
+$(window).resize(function() {
+  if (isSuper) {
+    isSuper = false;
+      $superShade.fadeOut("fast");
+      $superModal.hide("fast");
   }
 });
