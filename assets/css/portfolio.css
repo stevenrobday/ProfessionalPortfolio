@@ -16,13 +16,17 @@
   --thumb-border-hover: #0052cc;
   --thumb-font-hover: #474b52;
 
-  --navbar-direction: column;
   --pages-position: absolute;
-  --pages-top: calc(var(--font-size-l) * 1.5);
+  --pages-top: calc(var(--font-size-l) * -1.5);
   --pages-justify: center;
+  --pages-transition: top;
+  --pages-z-index: 2;
   --icons-position: absolute;
   --icons-width: 100%;
-  --icons-top: calc(var(--font-size-l) * 3);
+  --icons-top: calc(var(--font-size-l) * -3);
+  --icons-transition: top;
+  --icons-z-index: 1;
+  --hamburger-display: flex;
 
   --border-radius: 10px;
   --thumb-width: 200px;
@@ -31,26 +35,29 @@
   --img-height: 75px;
 }
 
-@media screen and (min-width: 22rem) {
+/* 37.5 x 16px = 600px */
+@media screen and (min-width: 24.5rem) {
   :root {
-    --navbar-direction: row;
     --pages-position: relative;
     --pages-top: 0;
     --pages-justify: flex-start;
-    --icons-top: calc(var(--font-size-l) * 1.5);
+    --pages-transition: "none";
+    --pages-z-index: 3;
+    --icons-top: calc(var(--font-size-l) * -1.5);
     --icons-position: absolute;  
-
     --img-height: 100px;
   }
 }
 
-/* 37.5 x 16px = 600px */
-@media screen and (min-width: 32rem) {
+
+@media screen and (min-width: 31rem) {
   :root {
     --icons-width: auto;
     --icons-position: relative;
     --icons-top: 0;
-
+    --icons-transition: "none";
+    --icons-z-index: 3;
+    --hamburger-display: none;
     --img-height: 150px;
   }
 }
@@ -143,8 +150,9 @@ nav {
   background-color: var(--navbar-background);
   display: flex;
   height: var(--navbar-height);
-  flex-direction: var(--navbar-direction);
   justify-content: space-between;
+  position: relative;
+  z-index: 3;
 }
 
 #nameContainer {
@@ -154,15 +162,17 @@ nav {
   justify-content: left;
   align-items: center;
   height: calc(var(--font-size-l) * 1.5);
-  margin: auto calc(var(--font-size-s) / 2);
+  padding: 0 calc(var(--font-size-s) / 2);
   flex: 0 0 auto;
+  z-index: 3;
+  background-color: var(--navbar-background);
 }
 
 ul {
 	list-style: none;
 }
 
-.pages{
+#pages{
   height: calc(var(--font-size-l) * 1.5);
   display: flex;
   margin-right: auto;
@@ -171,9 +181,11 @@ ul {
   background-color: var(--navbar-background);
   position: var(--pages-position);
   top: var(--pages-top);
+  transition: var(--pages-transition) .5s;
+  z-index: var(--pages-z-index);
 }
 
-.pages li a {
+#pages li a {
   text-decoration: none;
   height: 100%;
   width: 100%;
@@ -185,31 +197,45 @@ ul {
   font-size: var(--font-size-m);
 }
 
-.pages span{
+#pages span{
   padding: 0 var(--font-size-m);
 }
 
-.currentPage {
+#currentPage {
   background-color: var(--navbar-selected);
 }
 
-.pages li a:hover, .currentPage span {
+#pages li a:hover, #currentPage span {
   color: var(--color-highlight);
 }
 
-.icons {
+#icons {
   display: flex;
   width: var(--icons-width);
   height: calc(var(--font-size-l) * 1.5);
   background-color: var(--navbar-background);
   position: var(--icons-position);
   top: var(--icons-top);
+  transition: var(--icons-transition) .5s;
+  z-index: var(--icons-z-index);
 }
 
-.icons li {
-  width: auto;
+#icons li {
   height: 70%;
   margin: auto;
+}
+
+#hamburger {
+  display: var(--hamburger-display);
+  height: calc(var(--font-size-l) * 1.5);
+  background-color: var(--navbar-background);
+  z-index: 3;
+  width: 100%;
+}
+
+#hamburger > div {
+  height: 70%;
+  margin: auto 0 auto auto;
 }
 
 #github {
@@ -244,12 +270,22 @@ ul {
   background: url(../svg/emailHover.svg) no-repeat center;
 }
 
-#github, #linkedIn, #resume, #email, #github:hover, #linkedIn:hover, #resume:hover, #email:hover {
+#hamburgerImg {
+  background: url(../svg/hamburger.svg) no-repeat center;
+}
+
+#hamburgerImg:hover {
+  background: url(../svg/hamburgerHover.svg) no-repeat center;
+}
+
+#icons li div, #icons li div:hover, 
+#hamburgerImg, #hamburgerImg:hover {
   background-size: auto 100%;
   height: 100%; 
   width: calc(var(--font-size-l) * 1.8);
   cursor: pointer;
 }
+
 
 /*PORTFOLIO*/
 
