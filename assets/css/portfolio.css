@@ -23,7 +23,7 @@
   --pages-z-index: 2;
   --icons-position: absolute;
   --icons-width: 100%;
-  --icons-top: calc(var(--font-size-l) * -3);
+  --icons-top: calc(var(--font-size-l) * -1.5);
   --icons-transition: top;
   --icons-z-index: 1;
   --hamburger-display: flex;
@@ -43,7 +43,6 @@
     --pages-justify: flex-start;
     --pages-transition: "none";
     --pages-z-index: 3;
-    --icons-top: calc(var(--font-size-l) * -1.5);
     --icons-position: absolute;  
     --img-height: 100px;
   }

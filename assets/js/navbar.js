@@ -20,12 +20,10 @@ $hamburger.on("click", function () {
   }
   //close navbar
   else {
+    $icons.css("top", "calc(var(--font-size-l) * -1.5)");
+
     if (position.left === 0) {
       $pages.css("top", "calc(var(--font-size-l) * -1.5)");
-      $icons.css("top", "calc(var(--font-size-l) * -3)");
-    }
-    else {
-      $icons.css("top", "calc(var(--font-size-l) * -1.5)");
     }
   }
 });
