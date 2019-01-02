@@ -41,7 +41,7 @@
     --pages-position: relative;
     --pages-top: 0;
     --pages-justify: flex-start;
-    --pages-transition: "none";
+    --pages-transition: none;
     --pages-z-index: 3;
     --icons-position: absolute;  
     --img-height: 100px;
@@ -54,7 +54,7 @@
     --icons-width: auto;
     --icons-position: relative;
     --icons-top: 0;
-    --icons-transition: "none";
+    --icons-transition: none;
     --icons-z-index: 3;
     --hamburger-display: none;
     --img-height: 150px;
