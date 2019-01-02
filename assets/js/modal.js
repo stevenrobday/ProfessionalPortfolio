@@ -31,12 +31,18 @@ $thumbnail.on("click", function () {
   var imgHeight = $(this).height();
   var imgRatio = imgWidth / imgHeight;
   
-  var docWidth = $(document).width();
-  var docHeight = $(document).height();
+  var winWdth = $(window).width();
+  var winHeight = $(window).height();
   
-  if(docHeight >= docWidth){
-    $imgTag.height("auto");
-    $imgTag.width("80vw");
+  if(winHeight >= winWdth){
+    if(winWdth < 400 || imgRation < 1) {
+      $imgTag.height("auto");
+      $imgTag.width("65vw");
+    }
+    else {
+      $imgTag.height("auto");
+      $imgTag.width("80vw");
+    }
   }
   else if(imgRatio <= 1){
     $imgTag.height("calc(100vh - var(--font-size-l) * 4)");
