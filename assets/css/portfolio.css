@@ -32,6 +32,7 @@
   --thumb-width: 200px;
   --thumb-height: 150px;
   --modal-width: 85%;
+  --superModal-width: 85%;
   --img-height: 75px;
 }
 
@@ -72,6 +73,7 @@
     --thumb-width: 228px;
     --thumb-height: 171px;
     --modal-width: 80%;
+    --superModal-width: 80%;
     --img-height: 200px;
   }
 }
@@ -83,9 +85,11 @@
     --font-size-s: 1.3rem;
     --font-size-m: 1.5rem;
     --font-size-l: 1.9rem;
+
     --border-radius: 18px;
     --thumb-width: 252px;
     --thumb-height: 189px;
+    --modal-width: 70%;
     --img-height: 225px;
   }
 }
@@ -101,6 +105,7 @@
     --border-radius: 22px;
     --thumb-width: 300px;
     --thumb-height: 225px;
+    --modal-width: 60%;
     --img-height: 300px;
   }
 }
@@ -397,19 +402,23 @@ main {
 .modal, #superModal {
   display: none;
 	position: absolute;
-  
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   margin: auto;
-  width: var(--modal-width); 
+  
   height: calc(100vh - var(--font-size-l) * 4);
   z-index: 3;
 }
 
 .modal {
   background: #fffaea;
+  width: var(--modal-width); 
+}
+
+#superModal {
+  width: var(--superModal-width);
 }
 
 .modalWrapper {
