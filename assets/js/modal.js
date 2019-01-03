@@ -30,15 +30,15 @@ function showSuper() {
   var modalRatio = superModalWidth / superModalHeight;
 
   if(modalRatio < imgRatio){
-    var tmpHeight = $superModal.width() / imgWidth * imgHeight; 
-    var tmpWidth = $superModal.width(); 
+    var tmpHeight = superModalWidth / imgWidth * imgHeight; 
+    var tmpWidth = superModalWidth; 
     
     $superModalImgWrap.height(tmpHeight);
     $superModalImgWrap.width(tmpWidth);
   }
   else{
-    var tmpWidth = $superModal.height() / imgHeight * imgWidth; 
-    var tmpHeight = $superModal.height(); 
+    var tmpWidth = superModalHeight / imgHeight * imgWidth; 
+    var tmpHeight = superModalHeight; 
 
     $superModalImgWrap.height(tmpHeight);
     $superModalImgWrap.width(tmpWidth);
