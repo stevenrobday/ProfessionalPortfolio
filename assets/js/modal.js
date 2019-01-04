@@ -32,17 +32,14 @@ function showSuper() {
   if(modalRatio < imgRatio){
     var tmpHeight = superModalWidth / imgWidth * imgHeight; 
     var tmpWidth = superModalWidth; 
-    
-    $superModalImgWrap.height(tmpHeight);
-    $superModalImgWrap.width(tmpWidth);
   }
   else{
     var tmpWidth = superModalHeight / imgHeight * imgWidth; 
     var tmpHeight = superModalHeight; 
-
-    $superModalImgWrap.height(tmpHeight);
-    $superModalImgWrap.width(tmpWidth);
   }
+
+  $superModalImgWrap.height(tmpHeight);
+  $superModalImgWrap.width(tmpWidth);
 
   $superModal.css('margin-top', 'calc(' + $(document).scrollTop() + 'px + var(--font-size-l) * 2)');
 

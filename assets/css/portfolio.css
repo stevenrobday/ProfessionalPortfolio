@@ -47,6 +47,7 @@
     --pages-justify: flex-start;
     --pages-transition: none;
     --pages-z-index: 3;
+
     --icons-position: absolute;  
     --img-height: 100px;
   }
@@ -61,6 +62,7 @@
     --icons-transition: none;
     --icons-z-index: 3;
     --hamburger-display: none;
+
     --img-height: 150px;
   }
 }
@@ -88,6 +90,22 @@
     --font-size-s: 1.3rem;
     --font-size-m: 1.5rem;
     --font-size-l: 1.9rem;
+
+    --border-radius: 18px;
+    --thumb-width: 252px;
+    --thumb-height: 189px;
+    --modal-width: 70%;
+    --img-height: 225px;
+  }
+}
+
+/* 1920px */
+@media screen and (min-width: 120rem) {
+  :root {
+    --font-size-xs: 1.2rem;
+    --font-size-s: 1.4rem;
+    --font-size-m: 1.6rem;
+    --font-size-l: 2rem;
 
     --border-radius: 18px;
     --thumb-width: 252px;
@@ -133,6 +151,7 @@ body {
 nav {
   top: 0;
   width: 100%;
+  height: calc(var(--font-size-l) * 1.5);
   background-color: var(--navbar-background);
   display: flex;
   justify-content: space-between;
@@ -141,16 +160,17 @@ nav {
 }
 
 #nameContainer {
+  height: 100%;
   color: var(--color-highlight);
+  background-color: var(--navbar-background);
   font-size: var(--font-size-l);
   display: flex;
   justify-content: left;
   align-items: center;
-  height: calc(var(--font-size-l) * 1.5);
   padding: 0 calc(var(--font-size-s) / 2);
   flex: 0 0 auto;
   z-index: 3;
-  background-color: var(--navbar-background);
+  
 }
 
 ul {
@@ -158,7 +178,7 @@ ul {
 }
 
 #pages{
-  height: calc(var(--font-size-l) * 1.5);
+  height: 100%;
   display: flex;
   margin-right: auto;
   justify-content: var(--pages-justify);
@@ -197,7 +217,7 @@ ul {
 #icons {
   display: flex;
   width: var(--icons-width);
-  height: calc(var(--font-size-l) * 1.5);
+  height: 100%;
   background-color: var(--navbar-background);
   position: var(--icons-position);
   top: var(--icons-top);
@@ -212,7 +232,7 @@ ul {
 
 #hamburger {
   display: var(--hamburger-display);
-  height: calc(var(--font-size-l) * 1.5);
+  height: 100%;
   background-color: var(--navbar-background);
   z-index: 3;
   width: 100%;
