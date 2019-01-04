@@ -106,9 +106,11 @@ window.addEventListener('keyup', (e) => {
 
 $(window).resize(function () {
   if (isModal) {
+    $(document).scrollTop(0);
     showModal();
   }
   if (isSuper) {
+    $(document).scrollTop(0);
     showSuper();
   }
 });

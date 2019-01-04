@@ -7,6 +7,7 @@
   --font-size-l: 1.4rem;
 
   --body-background: #ebf3ff;
+
   --navbar-background: #0066ff;
   --navbar-selected: #0056d8;
   --color-highlight: #f7f7ff;
@@ -16,6 +17,7 @@
   --thumb-border-hover: #0052cc;
   --thumb-font-hover: #474b52;
 
+  /* navbar dynamic vars */
   --pages-position: absolute;
   --pages-top: calc(var(--font-size-l) * -1.5);
   --pages-justify: center;
@@ -28,6 +30,7 @@
   --icons-z-index: 1;
   --hamburger-display: flex;
 
+  /* portfolio dynamic vars */
   --border-radius: 10px;
   --thumb-width: 200px;
   --thumb-height: 150px;
@@ -36,7 +39,7 @@
   --img-height: 75px;
 }
 
-/* 37.5 x 16px = 600px */
+/* 24.5 x 16px = 392px */
 @media screen and (min-width: 24.5rem) {
   :root {
     --pages-position: relative;
@@ -49,7 +52,7 @@
   }
 }
 
-
+/* 512px */
 @media screen and (min-width: 32rem) {
   :root {
     --icons-width: auto;
@@ -62,7 +65,7 @@
   }
 }
 
-/* 800px */
+/* 640px */
 @media screen and (min-width: 40rem) {
   :root {
     --font-size-s: 1.2rem;
@@ -109,20 +112,6 @@
     --img-height: 300px;
   }
 }
-
-/*
-@media screen and (orientation: portrait) {
-  :root {
-    --navbar-direction: column;
-    --pages-position: absolute;
-    --icons-position: absolute;
-    --nav-items-width: 100%;
-    --nav-items-justify: center;
-    --icons-width: 100%;
-    --nav-items-height: calc(var(--font-size-l) * 3);
-    --pages-top: calc(var(--font-size-l) * 1.5);
-  }
-}*/
 
 * {
   margin: 0;
@@ -282,7 +271,6 @@ ul {
   cursor: pointer;
 }
 
-
 /*PORTFOLIO*/
 main {
   display: flex;
@@ -369,7 +357,7 @@ main {
   background: url(../png/hangman/reaganHover.png) no-repeat center;
 }
 
-/*for some reason I can't target with selectors here*/
+/*can't target with .exampleThumb + div here, mayhaps due to img size*/
 #writeUpsImg , #employeeImg, #pacmentalImg, #pebblesImg, 
 #triviaGameImg, #reaganImg, .exampleThumb:hover #writeUpsImg,
 .exampleThumb:hover #employeeImg, .exampleThumb:hover #pacmentalImg,
@@ -510,7 +498,7 @@ main {
   background: url(../svg/closeHover.svg) no-repeat center;
 }
 
-.close, #superClose, .close:hover, #superClose:hover, #superCloseWrap:hover > #superClose {
+.close, #superClose, .close:hover, #superClose:hover, #superCloseWrap:hover #superClose {
   background-size: auto 100%;
   height: var(--font-size-s);
   width: var(--font-size-s);
