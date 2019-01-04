@@ -295,6 +295,7 @@ main {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .examples {
