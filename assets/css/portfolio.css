@@ -16,6 +16,7 @@
   --thumb-border: #0047b3;
   --thumb-border-hover: #0052cc;
   --thumb-font-hover: #474b52;
+  --shade-color: #4d94ff;
 
   /* navbar dynamic vars */
   --pages-position: absolute;
@@ -132,9 +133,9 @@
 }
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 /* NAVBAR */
@@ -151,9 +152,7 @@ body {
 
 nav {
   top: 0;
-  width: 100%;
   height: calc(var(--font-size-l) * 1.5);
-  background-color: var(--navbar-background);
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -310,79 +309,64 @@ main {
   margin: calc(var(--font-size-s) * 2) auto;
 }
 
-.exampleThumb div:first-child, .modal {
+.exampleThumb div:first-child, .thumbFilter, .modal {
   border: calc(var(--font-size-s) / 3) solid var(--thumb-border);
   border-radius: var(--border-radius);
-}
-
-.exampleThumb:hover div:first-child {
-  border-color: var(--thumb-border-hover);
 }
 
 .exampleThumb {
   cursor: pointer;
   display: flex; 
   flex-direction: column;
+  position: relative;
 }
 
 .exampleThumb:hover {
   color: var(--thumb-font-hover);
 }
 
-#writeUpsImg {
-  background: url(../png/writeUps/writeUps.png) no-repeat center;
+.thumbFilter {
+  position: absolute;
+  background-color: #ffffff;
+  border-color: #ffffff;
+  width: var(--thumb-width);
+  height: var(--thumb-height); 
+  opacity: .2;
+  display: none;
 }
 
-.exampleThumb:hover #writeUpsImg {
-  background: url(../png/writeUps/writeUpsHover.png) no-repeat center;
+.exampleThumb:hover .thumbFilter {
+  display: block;
+}
+
+#writeUpsImg {
+  background: url(../png/writeUps/writeUps.png) no-repeat center;
 }
 
 #employeeImg {
   background: url(../png/employee/employee.png) no-repeat center;
 }
 
-.exampleThumb:hover #employeeImg {
-  background: url(../png/employee/employeeHover.png) no-repeat center;
-}
-
 #pacmentalImg {
   background: url(../png/pacmental/pacmental.png) no-repeat center;
-}
-
-.exampleThumb:hover #pacmentalImg{
-  background: url(../png/pacmental/pacmentalHover.png) no-repeat center;
 }
 
 #pebblesImg {
   background: url(../png/pebbles/pebbles.png) no-repeat center;
 }
 
-.exampleThumb:hover #pebblesImg {
-  background: url(../png/pebbles/pebblesHover.png) no-repeat center;
-}
-
 #triviaGameImg {
   background: url(../png/triviaGame/startPage.png) no-repeat center;
-}
-
-.exampleThumb:hover #triviaGameImg {
-  background: url(../png/triviaGame/startPageHover.png) no-repeat center;
 }
 
 #reaganImg {
   background: url(../png/hangman/reagan.png) no-repeat center;
 }
 
-.exampleThumb:hover #reaganImg {
-  background: url(../png/hangman/reaganHover.png) no-repeat center;
-}
-
-/*can't target with .exampleThumb + div here, mayhaps due to img size*/
+/*can't target with .exampleThumb + div here, mayhaps due to varying img size*/
 #writeUpsImg , #employeeImg, #pacmentalImg, #pebblesImg, 
-#triviaGameImg, #reaganImg, .exampleThumb:hover #writeUpsImg,
-.exampleThumb:hover #employeeImg, .exampleThumb:hover #pacmentalImg,
-.exampleThumb:hover #pebblesImg, .exampleThumb:hover #triviaGameImg, .exampleThumb:hover #reaganImg {
-  background-size: 100% auto; 
+#triviaGameImg, #reaganImg {
+  background-size: 100% 100%; 
   width: var(--thumb-width);
   height: var(--thumb-height); 
   margin-bottom: calc(var(--font-size-s) / 3);
@@ -397,13 +381,13 @@ main {
 
 #modalShade, #superShade {
 	display: none;
-	background: #4d94ff;
+	background: var(--shade-color);
   position: fixed; 
   left: 0; 
   top: 0;
   width: 100%; 
   height: 100%;
-  opacity: .5;
+  opacity: .3;
   z-index: 3;
 }
 
@@ -467,6 +451,7 @@ main {
   margin: var(--font-size-s) 10% var(--font-size-s) 10%;
 }
 
+/*energizer images will be 4 in a row or 2x2 depending space available*/
 #energizers {
   display: flex;
   flex-wrap: wrap;
@@ -483,11 +468,7 @@ main {
   margin: 0 10px 10px 10px;
 }
 
-#energizers > div > div > img{
-  height: var(--img-height);
-}
-
-.exampleImg img {
+#energizers > div > div > img, .exampleImg img{
   height: var(--img-height);
 }
 
