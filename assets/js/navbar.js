@@ -4,6 +4,7 @@ $(document).ready(function () {
   // and we can't have that!
   // code from https://perishablepress.com/3-ways-preload-images-css-javascript-ajax/
   // you can tell it's not mine cuz they don't use semicolons
+  
   var images = new Array()
   function preload() {
     for (i = 0; i < preload.arguments.length; i++) {

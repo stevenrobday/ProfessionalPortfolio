@@ -16,8 +16,6 @@ $(document).ready(function() {
   var $dataId;
   var $imgTag;
   
-  
-
   // show the project modal
   function showModal() {
     // disable background scrolling
