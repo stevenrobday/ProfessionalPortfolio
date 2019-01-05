@@ -492,7 +492,7 @@ main {
 /* sentence above each thumbnail inside project modal */
 .biggerMargin {
   margin-top: var(--font-size-l);
-  margin-bottom: calc(var(--font-size-l) / 3);
+  margin-bottom: calc(var(--font-size-l) / 2);
 }
 
 .thumbnail {
