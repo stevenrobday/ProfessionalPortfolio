@@ -108,12 +108,6 @@
     --font-size-s: 1.4rem;
     --font-size-m: 1.6rem;
     --font-size-l: 2rem;
-
-    --border-radius: 18px;
-    --thumb-width: 252px;
-    --thumb-height: 189px;
-    --modal-width: 70%;
-    --img-height: 225px;
   }
 }
 
@@ -139,8 +133,6 @@
   padding: 0;
 }
 
-/* NAVBAR */
-
 html {
 	font-family: 'Roboto', sans-serif;
 }
@@ -150,6 +142,8 @@ body {
   width: 100%;
   height: 100%;
 }
+
+/* NAVBAR */
 
 nav {
   top: 0;
@@ -292,6 +286,7 @@ ul {
 }
 
 /*PORTFOLIO*/
+
 main {
   display: flex;
   justify-content: space-evenly;
