@@ -296,6 +296,7 @@ main {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  margin-top: calc(var(--font-size-s) / 2);
 }
 
 /* container that contains category and projects */
@@ -309,7 +310,7 @@ main {
   font-size: var(--font-size-m);
   font-weight: bold;
   text-align: center;
-  margin: calc(var(--font-size-s) * 2) auto;
+  margin: calc(var(--font-size-s) / 2) auto;
 }
 
 /* project thumbnail image, thumbnail filter and modal */
@@ -323,6 +324,7 @@ main {
   display: flex; 
   flex-direction: column;
   position: relative;
+  margin: calc(var(--font-size-s) / 3) auto;
 }
 
 .exampleThumb:hover {
@@ -374,7 +376,7 @@ main {
   background-size: 100% 100%; 
   width: var(--thumb-width);
   height: var(--thumb-height); 
-  margin-bottom: calc(var(--font-size-s) / 3);
+  margin-bottom: calc(var(--font-size-s) / 5);
 }
 
 /* project title */
@@ -382,7 +384,6 @@ main {
   font-size: var(--font-size-xs);
   text-align: center;
   font-weight: bold;
-  margin-bottom: var(--font-size-s);
 }
 
 /* bg shade for modal and super modal */
