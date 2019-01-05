@@ -310,7 +310,7 @@ main {
   font-size: var(--font-size-m);
   font-weight: bold;
   text-align: center;
-  margin: calc(var(--font-size-s) / 2) auto;
+  margin: var(--font-size-s) auto calc(var(--font-size-s) / 2) auto;
 }
 
 /* project thumbnail image, thumbnail filter and modal */
@@ -383,7 +383,6 @@ main {
 .title {
   font-size: var(--font-size-xs);
   text-align: center;
-  font-weight: bold;
 }
 
 /* bg shade for modal and super modal */
