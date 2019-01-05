@@ -33,13 +33,13 @@ $(document).ready(function() {
     var superModalHeight = $superModal.height()
     var modalRatio = superModalWidth / superModalHeight;
 
-    // for smaller super modal ratio, stretch image container to the width of the super modal and calculate height
+    // for smaller super modal ratio, stretch image container to the width of the super modal and calculate height based on ratio
     if(modalRatio < imgRatio){
       var tmpWidth = superModalWidth; 
       var tmpHeight = superModalWidth / imgWidth * imgHeight; 
     }
 
-    // for equal or larger modal ratio, stretch image container to the height of the super modal
+    // for equal or larger modal ratio, stretch image container to the height of the super modal and calculate width
     else{
       var tmpWidth = superModalHeight / imgHeight * imgWidth; 
       var tmpHeight = superModalHeight; 
@@ -102,25 +102,25 @@ $(document).ready(function() {
   window.addEventListener('keyup', (e) => {
     if (e.key === "Escape") {  
 
-      // project modal
-      if (!isSuper && isModal) {
-        isModal = false;
-        $modalShade.fadeOut("fast");
-        $dataId.hide("fast");
-        $body.css('overflow', 'auto');
-      }
-
       // super modal
-      else if (isSuper) {
+      if (isSuper) {
         isSuper = false;
         $superShade.fadeOut("fast");
         $superModal.hide("fast");
       }
+
+      // project modal
+      else if (isModal) {
+        isModal = false;
+        $modalShade.fadeOut("fast");
+        $dataId.hide("fast");
+        $body.css('overflow', 'auto');
+      } 
     }
   });
 
   // resize the modals on any size change
-  // return scroll to top first, otherwise modal could get misplaced.
+  // return scroll to top first, otherwise modal will get misplaced when scrolled down on small window then maximized
   $(window).resize(function () {
     if (isModal) {
       $(document).scrollTop(0);
