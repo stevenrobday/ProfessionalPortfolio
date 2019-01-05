@@ -8,13 +8,14 @@
 
   --body-background: #ebf3ff;
 
+  /* navbar colors */
   --navbar-background: #0066ff;
   --navbar-selected: #0056d8;
   --color-highlight: #f7f7ff;
   --color-fade: #c4dcff;
 
+  /* portfolio colors */
   --thumb-border: #0047b3;
-  --thumb-border-hover: #0052cc;
   --thumb-font-hover: #474b52;
   --shade-color: #4d94ff;
 
