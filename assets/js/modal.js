@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  //globals
+  // globals
   var isModal = false;
   var isSuper = false;
   var imgRatio;
@@ -18,30 +18,30 @@ $(document).ready(function() {
   
   
 
-  //initial project modal
+  // show the project modal
   function showModal() {
-    //disable background scrolling
+    // disable background scrolling
     $body.css('overflow', 'hidden');
 
-    //place modal relative to scroll position
+    // place modal relative to scroll position
     $dataId.css('margin-top', 'calc(' + $(document).scrollTop() + 'px + var(--font-size-l) * 2)');
     
     $dataId.show("fast");
   }
 
-  //modal for thumbnails inside project modal (called "super modals" here)
+  // modal for thumbnails inside project modal (called "super modals" here)
   function showSuper() {
     var superModalWidth = $superModal.width();
     var superModalHeight = $superModal.height()
     var modalRatio = superModalWidth / superModalHeight;
 
-    //for smaller super modal ratio, stretch image container to the width of the super modal and calculate height
+    // for smaller super modal ratio, stretch image container to the width of the super modal and calculate height
     if(modalRatio < imgRatio){
       var tmpWidth = superModalWidth; 
       var tmpHeight = superModalWidth / imgWidth * imgHeight; 
     }
 
-    //for equal or larger modal ratio, stretch image container to the height of the super modal
+    // for equal or larger modal ratio, stretch image container to the height of the super modal
     else{
       var tmpWidth = superModalHeight / imgHeight * imgWidth; 
       var tmpHeight = superModalHeight; 
@@ -52,12 +52,13 @@ $(document).ready(function() {
 
     $superModal.css('margin-top', 'calc(' + $(document).scrollTop() + 'px + var(--font-size-l) * 2)');
 
-    //now place the image inside the super modal image container
+    // now place the image inside the super modal image container
     $superModalImg.html($imgTag);
     $superShade.fadeIn("fast");
     $superModal.show("fast");
   }
 
+  // display project modal
   $(".exampleThumb").on("click", function () {
     isModal = true;
     $modalShade.fadeIn("fast");
@@ -65,6 +66,7 @@ $(document).ready(function() {
     showModal();
   });
 
+  // close modal
   $(".close, #modalShade").on("click", function () {
     isModal = false;
     $modalShade.fadeOut("fast");
@@ -72,6 +74,7 @@ $(document).ready(function() {
     $body.css('overflow', 'auto');
   });
 
+  // display super modal
   $(".thumbnail").on("click", function () {
     var src = $(this).attr("src");
     $imgTag = $('<img>');
@@ -85,7 +88,9 @@ $(document).ready(function() {
     showSuper();
   });
 
+  // close supermodal
   $("#superCloseWrap, #superClose, #superShade, #superModal").on("click", function (e) {
+    // prevent closing if you click on the image
     if($(e.target).is('img')){
       return false;
     }
@@ -95,14 +100,19 @@ $(document).ready(function() {
     $superModal.hide("fast");
   });
 
+  // listener for closing modals on escape
   window.addEventListener('keyup', (e) => {
-    if (e.key === "Escape") {
+    if (e.key === "Escape") {  
+
+      // project modal
       if (!isSuper && isModal) {
         isModal = false;
         $modalShade.fadeOut("fast");
         $dataId.hide("fast");
         $body.css('overflow', 'auto');
       }
+
+      // super modal
       else if (isSuper) {
         isSuper = false;
         $superShade.fadeOut("fast");
@@ -111,6 +121,8 @@ $(document).ready(function() {
     }
   });
 
+  // resize the modals on any size change
+  // return scroll to top first, otherwise modal could get misplaced.
   $(window).resize(function () {
     if (isModal) {
       $(document).scrollTop(0);

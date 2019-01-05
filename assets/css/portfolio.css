@@ -298,11 +298,13 @@ main {
   flex-wrap: wrap;
 }
 
+/* container that contains category and projects */
 .examples {
   display: flex;
   flex-direction: column;
 }
 
+/* category for projects */
 .category {
   font-size: var(--font-size-m);
   font-weight: bold;
@@ -310,6 +312,7 @@ main {
   margin: calc(var(--font-size-s) * 2) auto;
 }
 
+/* project thumbnail image, thumbnail filter and modal */
 .exampleThumb div:first-child, .thumbFilter, .modal {
   border: calc(var(--font-size-s) / 3) solid var(--thumb-border);
   border-radius: var(--border-radius);
@@ -326,6 +329,7 @@ main {
   color: var(--thumb-font-hover);
 }
 
+/* filter for hovering thumbnails */
 .thumbFilter {
   position: absolute;
   background-color: #ffffff;
@@ -373,6 +377,7 @@ main {
   margin-bottom: calc(var(--font-size-s) / 3);
 }
 
+/* project title */
 .title {
   font-size: var(--font-size-xs);
   text-align: center;
@@ -380,6 +385,7 @@ main {
   margin-bottom: var(--font-size-s);
 }
 
+/* bg shade for modal and super modal */
 #modalShade, #superShade {
 	display: none;
 	background: var(--shade-color);
@@ -413,12 +419,14 @@ main {
   width: var(--superModal-width);
 }
 
+/* wrapper for all modal content */
 .modalWrapper {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
+/* modal title header. first child is an empty div, that way the second gets centered */
 .modalHeader {
   display: flex;
   top: 0;
@@ -436,17 +444,20 @@ main {
   margin: auto calc(var(--font-size-l) / 3) auto 0;
 }
 
+/* we want the modal body to scroll, but not the title */
 .modalBody {
   font-size: var(--font-size-s);
   overflow: auto;
   height: 100%;
 }
 
+/* list of technologies used for each project */
 .technologies {
   text-align: center;
   font-style: italic;
 }
 
+/* first paragraph under technologies */
 .summary {
   text-align: center;
   margin: var(--font-size-s) 10% var(--font-size-s) 10%;
@@ -473,19 +484,22 @@ main {
   height: var(--img-height);
 }
 
+/* make a little footer, otherwise the scroll bar will be outside the rounded border corner */
 .modalFooter {
   height: 10px;
+}
+
+/* sentence above each thumbnail inside project modal */
+.biggerMargin {
+  margin-top: var(--font-size-l);
+  margin-bottom: calc(var(--font-size-l) / 3);
 }
 
 .thumbnail {
   cursor: pointer;
 }
 
-.biggerMargin {
-  margin-top: var(--font-size-l);
-  margin-bottom: calc(var(--font-size-l) / 3);
-}
-
+/* x for modal and super modal */
 .close, #superClose {
   background: url(../svg/close.svg) no-repeat center;
   cursor: pointer;
@@ -505,6 +519,7 @@ main {
   width: var(--font-size-s);
 }
 
+/* will be sized with js. */
 #superModalImgWrap {
   position: absolute;
   top: 0;
@@ -514,6 +529,7 @@ main {
   margin: auto;
 }
 
+/* super modal x wrapper, to give it padding. position to the upper right of image */
 #superCloseWrap {
   position: absolute;
   top: calc(var(--font-size-s) * -1.8);
@@ -523,6 +539,7 @@ main {
   cursor: pointer;
 }
 
+/* stretch image to super modal image wrapper */
 #superModalImg img {
   width: 100%;
   height: 100%;
