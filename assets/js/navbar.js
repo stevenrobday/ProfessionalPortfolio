@@ -1,24 +1,4 @@
 $(document).ready(function () {
-
-  /* image preloader. otherwise the icons will flicker the first time you hover them
-  and we can't have that!
-  code from https://perishablepress.com/3-ways-preload-images-css-javascript-ajax/
-  you can tell it's not mine cuz they don't use semicolons */
-
-  var images = new Array()
-  function preload() {
-    for (i = 0; i < preload.arguments.length; i++) {
-      images[i] = new Image()
-      images[i].src = preload.arguments[i]
-    }
-  }
-  preload(
-    "https://stevenrobday.github.io/ProfessionalPortfolio/assets/svg/githubHover.svg",
-    "https://stevenrobday.github.io/ProfessionalPortfolio/assets/svg/linkedInHover.svg",
-    "https://stevenrobday.github.io/ProfessionalPortfolio/assets/svg/resumeHover.svg",
-    "https://stevenrobday.github.io/ProfessionalPortfolio/assets/svg/emailHover.svg"
-  )
-
   // globals for hamburger nav
   var isOpen = false;
 
