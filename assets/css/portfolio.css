@@ -438,6 +438,7 @@ main {
 .modalHeader div:first-child {
   margin-left: 1%;
   width: var(--font-size-s);
+  height: 100%;
 }
 
 .modalHeader div {
