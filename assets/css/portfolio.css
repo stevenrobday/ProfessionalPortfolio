@@ -365,8 +365,8 @@ main {
   background: url(../png/hangman/reagan.png) no-repeat center;
 }
 
-/* can't target with .exampleThumb + div here, mayhaps due to varying img size */
-#writeUpsImg , #employeeImg, #pacmentalImg, #pebblesImg, 
+/* can't target with .exampleThumb div:firstChild here, mayhaps due to varying img size */
+#writeUpsImg, #employeeImg, #pacmentalImg, #pebblesImg, 
 #triviaGameImg, #reaganImg {
   background-size: 100% 100%; 
   width: var(--thumb-width);
@@ -433,6 +433,11 @@ main {
                   calc(var(--border-radius) / 1.7) 
                   0 0;
   font-size: var(--font-size-l);
+}
+
+.modalHeader div:first-child {
+  margin-left: 1%;
+  width: var(--font-size-s);
 }
 
 .modalHeader div {

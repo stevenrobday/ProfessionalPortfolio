@@ -1,10 +1,10 @@
 $(document).ready(function () {
 
-  // image preloader. otherwise the icons will flicker the first time you hover them
-  // and we can't have that!
-  // code from https://perishablepress.com/3-ways-preload-images-css-javascript-ajax/
-  // you can tell it's not mine cuz they don't use semicolons
-  
+  /* image preloader. otherwise the icons will flicker the first time you hover them
+  and we can't have that!
+  code from https://perishablepress.com/3-ways-preload-images-css-javascript-ajax/
+  you can tell it's not mine cuz they don't use semicolons */
+
   var images = new Array()
   function preload() {
     for (i = 0; i < preload.arguments.length; i++) {
@@ -60,7 +60,7 @@ $(document).ready(function () {
   });
 
   // reset to default css on window resize,
-  // otherwise $pages and $icons will keep jquery css attr
+  // otherwise $pages and $icons will keep jquery css attributes
   $(window).resize(function () {
     isOpen = false;
     $pages.css("top", "");

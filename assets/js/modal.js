@@ -18,6 +18,7 @@ $(document).ready(function() {
   
   // show the project modal
   function showModal() {
+
     // disable background scrolling
     $body.css('overflow', 'hidden');
 
@@ -52,6 +53,7 @@ $(document).ready(function() {
 
     // now place the image inside the super modal image container
     $superModalImg.html($imgTag);
+    
     $superShade.fadeIn("fast");
     $superModal.show("fast");
   }
