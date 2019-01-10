@@ -1,13 +1,31 @@
 $(document).ready(function () {
+
+  /* image preloader. otherwise the icons will flicker the first time you hover them
+    and we can't have that! */
+
+  var path = "https://stevenrobday.github.io/ProfessionalPortfolio/assets/svg/";
+  var files = [
+    "githubHover.svg", "linkedInHover.svg", "resumeHover.svg", "emailHover.svg", "closeHover.svg", "hamburgerHover.svg"
+  ];
+  var images = new Array();
+
+  function preload(files) {
+    for (i = 0; i < files.length; i++) {
+      images[i] = new Image();
+      images[i].src = path + files[i];
+    }
+  }
+
+  preload(files);
+
   // globals for hamburger nav
   var isOpen = false;
 
-  var $hamburger = $("#hamburgerImg");
   var $pages = $("#pages");
   var $icons = $("#icons");
 
   // click the hamburger
-  $hamburger.on("click", function () {
+  $("#hamburgerImg").on("click", function () {
 
     var position = $pages.offset().left;
     isOpen = !isOpen;

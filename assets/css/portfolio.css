@@ -134,7 +134,7 @@
 }
 
 html {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Nunito Sans', sans-serif;
 }
 
 body {
@@ -516,8 +516,8 @@ main {
 
 .close, #superClose, .close:hover, #superClose:hover, #superCloseWrap:hover #superClose {
   background-size: auto 100%;
-  height: var(--font-size-s);
-  width: var(--font-size-s);
+  height: var(--font-size-xs);
+  width: var(--font-size-xs);
 }
 
 /* will be sized with js. */
@@ -533,8 +533,8 @@ main {
 /* super modal x wrapper, to give it padding. position to the upper right of image */
 #superCloseWrap {
   position: absolute;
-  top: calc(var(--font-size-s) * -1.8);
-  right: calc(var(--font-size-s) * -1.8);
+  top: calc(var(--font-size-s) * -1.5);
+  right: calc(var(--font-size-s) * -1.5);
   padding: calc(var(--font-size-s) / 4);
   background-color: #000000;
   cursor: pointer;

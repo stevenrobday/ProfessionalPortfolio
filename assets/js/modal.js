@@ -1,11 +1,12 @@
 $(document).ready(function() {
 
-  /* image preloader. otherwise the icons will flicker the first time you hover them
-  and we can't have that! also preloading modal gifs */
+  /* preload modal pngs and gifs */
 
   var path = "https://stevenrobday.github.io/ProfessionalPortfolio/assets/";
   var files = [
-                "svg/githubHover.svg", "svg/linkedInHover.svg", "svg/resumeHover.svg", "svg/emailHover.svg",
+                "png/hangman/dukakis.png", "png/hangman/gameOver.png", "png/hangman/guess.png",
+                "png/pacmental/leaderboard.png",
+                "png/triviaGame/question.png",
                 "gif/employee/add.gif", "gif/employee/edit.gif", "gif/employee/nav.gif", "gif/employee/search.gif", "gif/employee/viewSort.gif",
                 "gif/pacmental/air.gif", "gif/pacmental/earth.gif", "gif/pacmental/fire.gif", "gif/pacmental/intermission2.gif", "gif/pacmental/level3.gif", "gif/pacmental/level6.gif", "gif/pacmental/water.gif",
                 "gif/pebbles/ending.gif", "gif/pebbles/pebblesCommercial.gif", "gif/pebbles/stageOne.gif", "gif/pebbles/stageThree.gif", "gif/pebbles/stageTwo.gif", "gif/pebbles/tutorial.gif",
